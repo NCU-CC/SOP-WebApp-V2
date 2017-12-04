@@ -1,0 +1,58 @@
+<!--
+  Generated template for the SopEditorPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{ 'PAGE_SOP_EDITOR_TITLE' | translate }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-list>
+    
+      <ion-item>
+        <ion-label>{{ 'SOP_EDITOR_NAME' | translate }}</ion-label>
+        <ion-input type="text" [(ngModel)]="sop.name"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>{{ 'SOP_EDITOR_DESC' | translate }}</ion-label>
+        <ion-input type="text" [(ngModel)]="sop.desc"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>{{ 'SOP_EDITOR_UNIT' | translate }}</ion-label>
+        <ion-input type="text" [(ngModel)]="sop.unit"></ion-input>
+      </ion-item>
+      
+    </ion-list>
+        
+    
+    <button ion-button (click)="save()">{{ 'SOP_EDITOR_SAVE' | translate }}</button>
+    <button ion-button *ngIf="sop.id != null" (click)="delete()">{{ 'SOP_EDITOR_DELETE' | translate }}</button>
+
+    
+    <ion-list reorder="true" (ionItemReorder)="reorderSteps($event)">
+      <ion-item *ngFor="let step of steps; let i = index">
+        <ion-label floating>
+          {{ 'SOP_EDITOR_STEP' | translate }} {{ i + 1 }}
+        </ion-label>
+        <ion-input [(ngModel)]="steps[i][0]"></ion-input>
+      </ion-item>
+    </ion-list>
+    <button ion-button color="light" (click)="addStep()">{{ 'SOP_EDITOR_ADD' | translate }}</button>
+    <button ion-button color="light" (click)="removeEmptySteps()">{{ 'SOP_EDITOR_REMOVE' | translate }}</button>
+
+  
+
+
+  
+
+</ion-content>

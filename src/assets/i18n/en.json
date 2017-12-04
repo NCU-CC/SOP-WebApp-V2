@@ -1,0 +1,45 @@
+{
+	"MENU_HOME": "Home",
+	"MENU_MY_SOP": "My SOPs",
+	"MENU_SAVED_SOP": "Saved SOPs",
+	"MENU_HELP": "Help",
+	"MENU_LOGIN": "Logout",
+	"MENU_LOGOUT": "Logout",
+	
+	"PAGE_HOME_TITLE": "SOPs",
+	"HOME_SEARCH_PLACEHOLDER": "Input your keywords to search...",
+	
+
+
+	"PAGE_MY_SOP_TITLE": "My SOPs",
+
+
+	"PAGE_SAVED_SOP_TITLE": "Saved SOPs",
+
+
+	"PAGE_HELP_TITLE": "Help",
+	"PAGE_HELP_CONTENT": "???",
+
+
+	"PAGE_SOP_TITLE": "SOP",
+	"SOP_OF": "of",
+	"SOP_AT": "at",
+	"SOP_STEPS": "Steps",
+	"SOP_STEP": "Step",
+
+
+	"PAGE_SOP_EDITOR_TITLE": "SOP Editor",
+	"SOP_EDITOR_NAME": "SOP Name",
+	"SOP_EDITOR_DESC": "Description",
+	"SOP_EDITOR_AUTHOR": "Author",
+	"SOP_EDITOR_UNIT": "Published by",
+	"SOP_EDITOR_TIME": "Last updated time",
+	"SOP_EDITOR_STEP": "Step",
+	"SOP_EDITOR_SAVE": "Save",
+	"SOP_EDITOR_DELETE": "Delete",
+	"SOP_EDITOR_ADD": "Add",
+	"SOP_EDITOR_REMOVE": "Remove empty",
+
+	"MARK": "marked",
+	"MINE": "mine"
+}

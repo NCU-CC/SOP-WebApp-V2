@@ -1,0 +1,27 @@
+<ion-menu [content]="content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>
+        SOPv2
+        <span *ngIf="oauth.user">
+          {{ oauth.user }}
+        </span>
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <button ion-item menuClose *ngFor="let page of pages" (click)="navPage(page)">
+        {{ page.title | translate }}
+      </button>
+      <button ion-item menuClose (click)="oauth.authorize()" *ngIf="!oauth.user">
+        {{ 'MENU_LOGIN' | translate }}
+      </button>
+      <button ion-item menuClose (click)="oauth.logout()" *ngIf="oauth.user">
+        {{ 'MENU_LOGOUT' | translate }}
+      </button>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-nav [root]="rootPage" #content></ion-nav>

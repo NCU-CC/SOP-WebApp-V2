@@ -1,0 +1,56 @@
+<!--
+  Generated template for the SopPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{ sop.name }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <b>{{ sop.author }}</b>
+      {{ 'SOP_OF' | translate }}
+      <b>{{ sop.unit }}</b>
+      {{ 'SOP_AT' | translate }}
+      <b>{{ sop.date }}</b>
+    </ion-card-header>
+    <ion-card-content>
+      {{ sop.desc }}
+    </ion-card-content>
+  </ion-card>
+  <ion-list>
+    <ion-list-header>
+      {{ 'SOP_STEPS' | translate }}
+    </ion-list-header>
+    <ion-item *ngFor="let step of sop.steps; let i = index">
+      <h2>{{ 'SOP_STEP' | translate }} {{ i + 1 }}</h2>
+      {{ step }}
+    </ion-item>
+  </ion-list>
+  
+  <ion-fab right bottom *ngIf="oauth.user">
+    <button ion-fab *ngIf="!sop.marked" (click)="mark()">
+      <ion-icon name="eye"></ion-icon>
+    </button>
+    <button ion-fab *ngIf="sop.marked" (click)="delMark()">
+      <ion-icon name="eye-off"></ion-icon>
+    </button>
+  </ion-fab>
+  
+  <ion-fab right top edge *ngIf="oauth.user">
+    <button ion-fab *ngIf="editable" (click)="editSop()">
+      <ion-icon name="create"></ion-icon>
+    </button>
+    <button ion-fab *ngIf="!editable" (click)="copySop()">
+      <ion-icon name="copy"></ion-icon>
+    </button>
+  </ion-fab>
+</ion-content>
