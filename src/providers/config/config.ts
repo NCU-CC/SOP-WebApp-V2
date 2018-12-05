@@ -42,7 +42,7 @@ export class ConfigProvider {
         authorizeUrl: 'https://oauth.apitest.cc.ncu.edu.tw/oauth/authorize',
         clientId: '2a2969b346976f1395f5054c04ced72087f36bff33b6076c947bdbf84cee1d9e',
         clientSecret: '49a1c8a33a432b4154ec2afc9085ce9500e3322906eccdde8bf76a3b92247233',
-        redirectUri: 'https://webapp.cc.ncu.edu.tw/sop/',
+        redirectUri: 'https://sop.webapp.cc.ncu.edu.tw/',
         tokenUrl: 'https://oauth.apitest.cc.ncu.edu.tw/oauth/token'
       };
 
