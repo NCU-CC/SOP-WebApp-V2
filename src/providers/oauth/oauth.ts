@@ -55,7 +55,7 @@ export class OauthProvider {
       params[pair[0]] = pair[1] || '';
     });
 
-    if(params['token_type'] == 'bearer')
+    if((params.token_type || '').toLowerCase() == 'bearer')
       this.getAccessTokenFromUri(params, callback);
 
     else
